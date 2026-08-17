@@ -1,0 +1,48 @@
+import os
+import sqlite3
+import streamlit as st
+
+st.title("Patas e Laços - Cadastro de Pets")
+
+
+with st.form("formCadastroPets"):
+    nome =st.text_input("Nome*", placeholder="Digite o nome do pet")
+
+    porte = st.segmented_control("Porte", options=["Pequeno", "Médio", "Grande"])
+
+    raca = st.text_input("Raça*", placeholder="Digite a raça do pet")
+
+    sexo = st.segmented_control("Sexo*", options=["Macho", "Fêmea"])
+
+    idade = st.number_input("Idade (anos)*", min_value=0, max_value=30, step=1)
+
+    status_adocao = st.segmented_control("Status de Adoção*", options=["Disponível", "Adotado"])
+
+    descricao = st.text_area("Descrição", placeholder="Digite uma breve descrição do pet")
+
+    foto = st.file_uploader("Foto do Pet", type=["jpg", "jpeg", "png"])
+
+
+    if st.form_submit_button("Cadastrar pet"):
+
+        if not nome:
+            st.error("Preencha o nome")
+
+        elif not raca:
+            st.error("Preencha a raça")
+
+        elif not sexo:
+            st.error("Preencha o sexo")
+
+        elif not status_adocao:
+            st.error("Preencha o status de adoção")
+
+        else:
+            caminho_salvo = ""
+            if foto is not None:
+                caminho_salvo = os.path.join("uploads", foto.name)
+                with open(caminho_salvo, "wb") as f:
+                    f.write(foto.read())
+
+            st.success("Pet cadastrado com sucesso!")
+            st.balloons()

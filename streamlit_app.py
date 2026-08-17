@@ -26,5 +26,3 @@ with col_texto:
 
         if st.button("🎉 Comemorar Adoções Recentes!"):
             st.balloons()
-
-st.markdown("---")
