@@ -1,6 +1,7 @@
 import streamlit as st
 
 st.title("Gerenciar e Editar Pets")
+
 st.write("Selecione um animal para atualizar o status ou editar as informações cadastradas.")
 
 # Dados simulados apenas para teste
@@ -41,13 +42,11 @@ if selecionado:
     id_pet_escolhido = opcoes_pets[selecionado]
     pet = pets_simulados[id_pet_escolhido]
 
-    st.divider()
-
     with st.form("form_edicao_pet"):
         st.subheader(f"Editando dados de: {pet['nome']}")
 
         col1, col2 = st.columns(2)
-        
+
         with col1:
             nome_edit = st.text_input("Nome", value=pet["nome"])
             raca_edit = st.text_input("Raça", value=pet["raca"])
@@ -69,6 +68,7 @@ if selecionado:
                 st.success(f"Dados de **{nome_edit}** atualizados com sucesso!")
                 if status_edit == "Adotado" and pet["status"] != "Adotado":
                     st.balloons()
+
 
     st.divider()
 

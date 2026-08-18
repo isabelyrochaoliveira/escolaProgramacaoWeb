@@ -64,7 +64,9 @@ pets_filtrados = [
 
 st.markdown(f"**Exibindo {len(pets_filtrados)} pet(s)**")
 
+
 st.divider()
+
 
 if not pets_filtrados:
     st.info("Nenhum pet encontrado com os filtros selecionados.")
