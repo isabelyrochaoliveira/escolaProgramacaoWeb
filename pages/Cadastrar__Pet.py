@@ -4,19 +4,26 @@ import streamlit as st
 
 st.title("Patas e Laços - Cadastro de Pets")
 
-
 with st.form("formCadastroPets"):
-    nome =st.text_input("Nome*", placeholder="Digite o nome do pet")
 
-    porte = st.segmented_control("Porte", options=["Pequeno", "Médio", "Grande"])
+    col1, col2 = st.columns(2)
 
-    raca = st.text_input("Raça*", placeholder="Digite a raça do pet")
+    with col1:
 
-    sexo = st.segmented_control("Sexo*", options=["Macho", "Fêmea"])
+        nome =st.text_input("Nome*", placeholder="Digite o nome do pet")
 
-    idade = st.number_input("Idade (anos)*", min_value=0, max_value=30, step=1)
+        raca = st.text_input("Raça*", placeholder="Digite a raça do pet")
 
-    status_adocao = st.segmented_control("Status de Adoção*", options=["Disponível", "Adotado"])
+        idade = st.number_input("Idade (anos)*", min_value=0, max_value=30, step=1)
+
+
+    with col2:
+        porte = st.segmented_control("Porte", options=["Pequeno", "Médio", "Grande"])
+
+        sexo = st.segmented_control("Sexo*", options=["Macho", "Fêmea"])
+
+        status_adocao = st.segmented_control("Status de Adoção*", options=["Disponível", "Adotado"])
+
 
     descricao = st.text_area("Descrição", placeholder="Digite uma breve descrição do pet")
 
