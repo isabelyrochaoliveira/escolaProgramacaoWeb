@@ -96,7 +96,7 @@ else:
 
                 if pet["status"] == "Disponível":
                     st.success("Disponível para adoção")
-                    if st.button(f"Quero adotar {pet['nome']}!", key=f"btn_{pet['id']}"):
+                    if st.button(f"Quero adotar {pet['nome']}!", key=f"btn_{pet['id']}", type="primary"):
                         st.balloons()
                         st.success( f"Parabéns pelo interesse em adotar **{pet['nome']}**! A equipe entrará em contato.")
 

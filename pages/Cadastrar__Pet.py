@@ -30,7 +30,7 @@ with st.form("formCadastroPets"):
     foto = st.file_uploader("Foto do Pet", type=["jpg", "jpeg", "png"])
 
 
-    if st.form_submit_button("Cadastrar pet"):
+    if st.form_submit_button("Cadastrar pet", type="primary", use_container_width=True):
 
         if not nome:
             st.error("Preencha o nome")

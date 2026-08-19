@@ -59,7 +59,7 @@ if selecionado:
 
         descricao_edit = st.text_area("Descrição", value=pet["descricao"])
 
-        salvar = st.form_submit_button("Salvar Alterações")
+        salvar = st.form_submit_button("Salvar Alterações", type="primary")
 
         if salvar:
             if not nome_edit or not raca_edit:

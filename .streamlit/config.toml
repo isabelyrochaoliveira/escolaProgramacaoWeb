@@ -1,0 +1,16 @@
+# .streamlit/config.toml
+
+[theme]
+# Cor de Destaque
+primaryColor = "#E07A5F"
+
+# Fundo Principal
+backgroundColor = "#F9F9FB"
+
+# Fundo da Barra Lateral, Cards e Expansores
+secondaryBackgroundColor = "#E7EFEA"
+
+# Cor dos Textos
+textColor = "#2D3748"
+
+font = "sans serif"
