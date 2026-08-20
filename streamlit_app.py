@@ -37,5 +37,6 @@ with col_texto:
         1. **Explore:** Acesse a aba *Ver Pets* para conhecer os animais disponíveis.
         2. **Cadastre:** Se você é uma ONG ou protetor, use a aba *Cadastrar Pet*.
         3. **Acompanhe:** Mantenha os dados e status de adoção atualizados na aba *Gerenciar*.
+        4. **Saiba mais:** Acesse a aba *Sobre* para conhecer mais sobre a plataforma.
         """
     )
