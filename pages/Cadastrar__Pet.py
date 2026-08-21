@@ -1,11 +1,8 @@
 import os
-from google.cloud import firestore
+from db import db
 import streamlit as st
 
 st.title("Patas e Laços - Cadastro de Pets")
-
-os.makedirs("uploads", exist_ok=True)
-db = firestore.Client.from_service_account_json("firebase.json")
 
 with st.form("formCadastroPets"):
   col1, col2 = st.columns(2)

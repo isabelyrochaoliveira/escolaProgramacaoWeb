@@ -1,8 +1,6 @@
 import os
 import streamlit as st
-from google.cloud import firestore
-
-db = firestore.Client.from_service_account_json("firebase.json")
+from db import db
 
 st.title("Pets Disponíveis para Adoção")
 st.write("Conheça os animaizinhos que estão à procura de um lar cheio de amor!")

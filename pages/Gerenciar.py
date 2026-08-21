@@ -1,7 +1,5 @@
 import streamlit as st
-from google.cloud import firestore
-
-db = firestore.Client.from_service_account_json("firebase.json")
+from db import db
 
 st.title("Gerenciar e Editar Pets")
 st.write(
