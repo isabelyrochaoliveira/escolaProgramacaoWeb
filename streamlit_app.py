@@ -3,13 +3,6 @@ import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 
-try:
-  if "FIREBASE_JSON" in st.secrets and not os.path.exists("firebase.json"):
-    with open("firebase.json", "w", encoding="utf-8") as f:
-      f.write(st.secrets["FIREBASE_JSON"])
-except Exception:
-  pass
-
 def carregar_animacao(url: str):
     requisicao = requests.get(url)
     if requisicao.status_code != 200:
